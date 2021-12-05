@@ -17,7 +17,6 @@ import Link from "next/link";
 
 export default function Layout({ children, title }, props) {
 	const [anchorEl, setAnchorEl] = useState(null);
-	const [childs, setChilds] = useState(null);
 	const open = Boolean(anchorEl);
 
 	const handleClick = (event) => {
@@ -42,15 +41,6 @@ export default function Layout({ children, title }, props) {
 				break;
 		}
 	};
-	const handleLoad = () => {
-		console.log("window lOaded", title, children);
-
-		setChilds(children);
-	};
-	useEffect(() => {
-		window.addEventListener("load", handleLoad);
-	}, [<Layout />]);
-
 	return (
 		<Container maxWidth="lg" sx={{ height: "100vh" }}>
 			<Head>
