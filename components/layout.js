@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -47,7 +46,9 @@ export default function Layout({ children, title }, props) {
 		}
 	};
 	return (
-		<Paper variant="outlined" sx={{ width: "100%", height: "100vh" }}>
+		<Paper
+			variant="outlined"
+			sx={{ width: "100%", height: "100vh", borderRadius: 0 }}>
 			<Container maxWidth="lg" sx={{ height: "100%" }}>
 				<Head>
 					<title>{title}</title>
