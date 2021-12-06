@@ -48,7 +48,7 @@ export default function Layout({ children, title }, props) {
 	return (
 		<Paper
 			variant="outlined"
-			sx={{ width: "100%", height: "100vh", borderRadius: 0 }}>
+			sx={{ width: "100%", minHeight: "100vh", borderRadius: 0 }}>
 			<Container maxWidth="lg" sx={{ height: "100%" }}>
 				<Head>
 					<title>{title}</title>
