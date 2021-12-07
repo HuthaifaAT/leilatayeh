@@ -80,19 +80,19 @@ export default function Layout({ children, title }, props) {
 							{title}
 						</Typography>
 						<Breadcrumbs
-							seperator="/"
-							maxItems={2}
+							separator="|"
 							sx={{ paddingInlineEnd: "0px !important" }}>
 							<Button
 								size="small"
-								variant="text"
+								variant="string"
 								color="inherit"
-								onClick={handleRegClick}>
+								onClick={handleRegClick}
+								sx={{ px: "-100px !important" }}>
 								<Link href="/login">Login</Link>
 							</Button>
 							<Button
 								size="small"
-								variant="text"
+								variant="string"
 								color="inherit"
 								onClick={handleRegClick}>
 								<Link href="/login">Register</Link>
@@ -105,9 +105,6 @@ export default function Layout({ children, title }, props) {
 					</Toolbar>
 				</AppBar>
 				<Box sx={{ width: "100%" }}>{children}</Box>
-				<Paper>
-					<Typography variant="h1">Test</Typography>
-				</Paper>
 			</Container>
 		</Paper>
 	);
